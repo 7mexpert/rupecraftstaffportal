@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Portal - Code Lookup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>RupeCraft Staff Portal</h1>
+    <div>
+      <a href="index.html">Code Lookup</a>
+      <a href="discordtickets.html">Discord Tickets</a>
+      <a href="enforcingrules.html">Enforcing Rules</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>🔍 Anticheat Code Lookup</h2>
+    <p>Enter a code (e.g., <b>C01A</b>, <b>M03B</b>, <b>P05C</b>)</p>
+
+    <input type="text" id="codeInput" placeholder="Enter code..." maxlength="4">
+    <button onclick="lookupCode()">Check Code</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
