@@ -189,23 +189,23 @@ const codes = {
   "P11A": { name: "Player Inventory A", line: 3824 },
   "P11B": { name: "Player Inventory B", line: 3840 },
   "P12A": { name: "Player Invalid A", line: 3857 },
-  "P11C": { name: "Player Invalid C", line: 3875 },
-  "P11D": { name: "Player Invalid D", line: 3893 },
-  "P11E": { name: "Player Invalid E", line: 3909 },
-  "P11F": { name: "Player Invalid F", line: 3927 },
-  "P11G": { name: "Player Invalid G", line: 3945 },
-  "P11H": { name: "Player Invalid H", line: 3963 },
-  "P11I": { name: "Player Invalid I", line: 3981 },
-  "P11J": { name: "Player Invalid J", line: 3999 },
-  "P12A": { name: "Player Ground Spoof A", line: 4018 },
-  "P12B": { name: "Player Ground Spoof B", line: 4034 },
-  "P12C": { name: "Player Ground Spoof C", line: 4050 },
-  "P13A": { name: "Player Improbable A", line: 4067 },
-  "P13B": { name: "Player Improbable B", line: 4080 },
-  "P13C": { name: "Player Improbable C", line: 4093 },
-  "P13D": { name: "Player Improbable D", line: 4106 },
-  "P13E": { name: "Player Improbable E", line: 4119 },
-  "P13F": { name: "Player Improbable F", line: 4132 }
+  "P12C": { name: "Player Invalid C", line: 3875 },
+  "P12D": { name: "Player Invalid D", line: 3893 },
+  "P12E": { name: "Player Invalid E", line: 3909 },
+  "P12F": { name: "Player Invalid F", line: 3927 },
+  "P12G": { name: "Player Invalid G", line: 3945 },
+  "P12H": { name: "Player Invalid H", line: 3963 },
+  "P12I": { name: "Player Invalid I", line: 3981 },
+  "P12J": { name: "Player Invalid J", line: 3999 },
+  "P13A": { name: "Player Ground Spoof A", line: 4018 },
+  "P13B": { name: "Player Ground Spoof B", line: 4034 },
+  "P13C": { name: "Player Ground Spoof C", line: 4050 },
+  "P14A": { name: "Player Improbable A", line: 4067 },
+  "P14B": { name: "Player Improbable B", line: 4080 },
+  "P14C": { name: "Player Improbable C", line: 4093 },
+  "P14D": { name: "Player Improbable D", line: 4106 },
+  "P14E": { name: "Player Improbable E", line: 4119 },
+  "P14F": { name: "Player Improbable F", line: 4132 }
 };
 
 function lookupCode() {
@@ -223,3 +223,4 @@ function lookupCode() {
     resultDiv.innerHTML = `<p style="color:#f87171">❌ Code not found</p>`;
   }
 }
+
