@@ -1,44 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Staff Portal - Discord Tickets</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="navbar">
-    <h1>RupeCraft Staff Portal</h1>
-    <div>
-      <a href="index.html">Code Lookup</a>
-      <a href="discordtickets.html">Discord Tickets</a>
-      <a href="enforcingrules.html">Enforcing Rules</a>
-    </div>
-  </div>
+    <head>
+        <title>Rupecraft Staff Portal</title>
+        <link rel="icon" type="image/x-icon" href="image.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="The official website of Rupecraft">
+        <meta name="keywords" content="SMP, Minecraft, Rupecraft">
+        <meta name="author" content="Rupecraft team">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+        <style>
+            * {
+                font-family: Rubik, Verdana, Arial, sans-serif;
+                box-sizing: border-box;
+                color: white;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: #222222;
+                text-align: center;
+            }
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: #1a1a1a;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            }
+            header img {
+                height: 55px;
+            }
+            .nav-right {
+                display: flex;
+                gap: 15px;
+            }
+            .nav-button {
+                background-color: #ffbe3133;
+                border: 2px solid #ffbe31;
+                border-radius: 8px;
+                padding: 8px 14px;
+                color: #ffbe31;
+                font-weight: bold;
+                font-size: 1em;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .nav-button:hover {
+                background-color: #ffbe31;
+                color: #222222;
+                box-shadow: 0 0 10px #ffbe31;
+                transform: translateY(-2px);
+            }
+            .nav-button.main-site {
+                background-color: #31a2ff33;
+                border: 2px solid #31a2ff;
+                color: #31a2ff;
+            }
+            .nav-button.main-site:hover {
+                background-color: #31a2ff;
+                color: #222;
+                box-shadow: 0 0 10px #31a2ff;
+            }
+            h1, p {
+                max-width: 1000px;
+                margin: 20px auto;
+            }
+            .focused {
+                width: calc(100% -20px);
+                max-width: 1000px;
+                margin: 20px auto;
+                display: flex;
+                column-gap: 20px;
+                justify-content: space-between;
+            }
+            .focused div {
+                width: 50%;
+                border-left: 7px solid #ffbe31;
+                border-radius: 7px;
+                background-color: #ffbe3127;
+                padding: 20px;
+            }
+            .attention-drawer {
+                background-image: url(screenshotBG.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 60px;
+            }
+            .codelookup {
+                background-color: #ffbe3133;
+                border: 7px solid #ffbe31;
+                border-radius: 14px;
+                padding: 20px;
+                max-width: 500px;
+                margin: auto;
+                box-shadow: 0 0 15px rgba(255, 190, 49, 0.4);
+            }
+            input[type="text"] {
+                outline: none;
+                background-color: transparent;
+                border: none;
+                font-size: 1.25em;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-align: center;
+                color: #ffbe31;
+                width: 100%;
+            }
+            button.action {
+                background:none;
+                border:none;
+                background-color: #ffbe3133;
+                border: 3px solid #ffbe31;
+                border-radius: 14px;
+                padding: 12px 20px;
+                font-size: 1em;
+                font-weight: bold;
+                color: #ffbe31;
+                margin: 20px auto;
+                display: block;
+                box-shadow: 0 0 15px rgba(255, 190, 49, 0.4);
+                transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s;
+            }
+            button.action:hover {
+                transform: scale(1.05);
+                background-color: #ffbe31;
+                color: #222;
+                box-shadow: 0 0 20px rgba(255, 190, 49, 0.6);
+            }
+            .content {
+                max-width: 1000px;
+                margin: auto;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="8aeb7a9d-e949-46b2-b93e-a0ad05f49bd5.png" alt="Rupecraft logo">
+            <div class="nav-right">
+                <a href="index.html" class="nav-button">Code Lookup</a>
+                <a href="tickets.html" class="nav-button">Discord Tickets</a>
+                <a href="rules.html" class="nav-button">Enforcing Rules</a>
+                <a href="https://rupecraft.com" target="_blank" class="nav-button main-site">Main Site</a>
+            </div>
+        </header>
 
-  <div class="container">
-    <h2>Discord Tickets</h2>
-    <p>‎ </p>
-    <p>Helping players encompasses both responding to player inquiries in-game and on Discord, as well as </p>
-    <p>responding to tickets on Discord. As a moderator, you are expected to fulfil both roles.</p>
-    <p>‎ </p>
-    <p>Tickets are shown on the “Support” tab of your Discord client.</p>
-    <p>‎ </p>
-    <p>When responding to a ticket, you should not press the “Claim” button unless it is an administrative</p>
-    <p>ticket and you have admin privileges. Many tickets will be simple, like “Is X allowed on the server?”,</p>
-    <p>or “How do I do X on this server?”. These are simple questions that can be answered quickly. Give a </p>
-    <p>concise answer that clearly answers the question, and then request to close the ticket by typing </p>
-    <p>“/closerequest”. If the person feels you haven’t sufficiently answered their question, they will deny </p>
-    <p>the close request. </p>
-    <p>‎ </p>
-    <p>Tickets like suggestions or bug reports are administrative, and should be handled by an admin. </p>
-    <p>‎ </p>
-    <p>If they are trolling by denying requests instead of denying for an actual reason, you should alert an </p>
-    <p>admin in order for them to force-close the ticket. If you are not an admin, you should never force-close </p>
-    <p>a ticket yourself. </p>
-    <p>‎ </p>
-    <p>If another person has answered or is answering a ticket, do not attempt to answer the ticket as well. </p>
+        <div class="attention-drawer">
+            <p style="font-size: 1.75em">
+                Welcome to the Rupecraft Staff Portal.
+            </p>
+            <div class="focused">
+                <div>
+                    Last updated 19<sup>th</sup> August 2025.
+                </div>
+                <div>
+                    Early version, please report bugs to the dev team.
+                </div>
+            </div>
+        </div>
 
-  </div>
-</body>
+        <div class="content">
+            <p>
+                Helping players encompasses both responding to player inquiries in-game and on Discord, as well as responding to tickets on Discord. As a moderator, you are expected to fulfil both roles.<br><br>
+                First, we will cover responding to Discord tickets.<br><br>
+                Tickets are shown on the “Support” tab of your Discord client, and will appear something like this:<br><br>
+                When responding to a ticket, you should not press the “Claim” button unless it is an administrative ticket and you have admin privileges. Many tickets will be simple, like “Is X allowed on the server?”, or “How do I do X on this server?”. These are simple questions that can be answered quickly. Give a concise answer that clearly answers the question, and then request to close the ticket by typing “/closerequest”. If the person feels you haven't sufficiently answered their question, they will deny the close request.<br><br>
+                Tickets like suggestions or bug reports are administrative, and should be handled by an admin.<br><br>
+                If they are trolling by denying requests instead of denying for an actual reason, you should alert an admin in order for them to force-close the ticket. If you are not an admin, you should never force-close a ticket yourself.<br><br>
+                If another person has answered or is answering a ticket, do not attempt to answer the ticket as well.<br><br>
+            </p>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
 </html>
