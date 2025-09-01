@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AC Code Lookup - Rupecraft Staff</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* --- AC Lookup Specific Styles --- */
+.code-lookup-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #1a1a1a;
+    border: 3px solid gold;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+.code-lookup-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    border: 2px solid gold;
+    background-color: #222;
+    color: gold;
+    outline: none;
+}
+.code-lookup-container input[type="text"]::placeholder {
+    color: #ffd70077;
+}
+.code-lookup-container button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid gold;
+    border-radius: 10px;
+    background-color: transparent;
+    color: gold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.code-lookup-container button:hover {
+    background-color: gold;
+    color: #222;
+    box-shadow: 0 0 15px gold;
+}
+#result {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+#result span.code {
+    color: gold;
+    font-weight: bold;
+}
+#result span.name, #result span.line {
+    color: #fff;
+}
+#result p.error {
+    color: #f87171;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+    <img src="assets/images/logo.png" class="logo" alt="Rupecraft Logo">
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <div class="section-line"></div>
+        <a href="ac-code-lookup.html" class="active">AC Code Lookup</a>
+        <a href="stats-lookup.html">Stats Lookup</a>
+        <a href="punishment-lookup.html">Punishment Lookup</a>
+        <div class="section-line"></div>
+        <a href="discord-tickets.html">Discord Tickets</a>
+        <a href="moderation.html">Moderation</a>
+        <div class="section-line"></div>
+        <a href="quick-links.html">Quick Links</a>
+    </nav>
+</aside>
+
+<main class="content">
+    <header>
+        <h1  style="text-align: center;">AC Code Lookup</h1>
+        <p  style="text-align: center;">Enter an anticheat code to see its name and line number.</p>
+    </header>
+
+    <div class="code-lookup-container">
+        <input type="text" id="codeInput" placeholder="Enter code..." maxlength="4">
+        <button onclick="lookupCode()">Check Code</button>
+        <div id="result"></div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

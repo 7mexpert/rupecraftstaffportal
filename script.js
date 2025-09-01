@@ -1,6 +1,3 @@
-// R7mexpert vibe coding quarantine zone begins line 4. Don't ask what is happening here. Nobody has any idea.
-// RupeCraft Anticheat Codes Database (manual lines)
-
 const codes = {
   // --- Combat ---
   "C01A": { name: "Combat Aim A", line: 640 },
@@ -210,19 +207,22 @@ const codes = {
 };
 
 function lookupCode() {
-  const input = document.getElementById("codeInput").value.toUpperCase().trim();
-  const resultDiv = document.getElementById("result");
+    const input = document.getElementById("codeInput").value.toUpperCase().trim();
+    const resultDiv = document.getElementById("result");
 
-  if (codes[input]) {
-    resultDiv.innerHTML = `
-      <p><span style="color:#38bdf8">${input}</span>: 
-         <span style="color:#ffffff">${codes[input].name}</span></p>
-      <p><span style="color:#38bdf8">Line:</span> 
-         <span style="color:#ffffff">${codes[input].line}</span></p>
-    `;
-  } else {
-    resultDiv.innerHTML = `<p style="color:#f87171">Error: Requested code does not exist.</p>`;
-  }
+    if(codes[input]){
+        resultDiv.innerHTML = `
+            <div class="result-card">
+                <p><span class="code">${input}</span></p>
+                <p><span class="name">${codes[input].name}</span></p>
+                <p><span class="line">Line: ${codes[input].line}</span></p>
+            </div>
+        `;
+    } else {
+        resultDiv.innerHTML = `
+            <div class="result-card">
+                <p class="error">Error: Requested code does not exist.</p>
+            </div>
+        `;
+    }
 }
-
-// R7mexpert vibe coding quarantine zone ends here.
