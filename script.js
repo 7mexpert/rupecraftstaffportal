@@ -206,6 +206,10 @@ const codes = {
   "P13F": { name: "Player Improbable F", line: 4132 }
 };
 
+function toggleMenu() {
+  document.querySelector('.sidebar').classList.toggle('open');
+}
+
 function lookupCode() {
     const input = document.getElementById("codeInput").value.toUpperCase().trim();
     const resultDiv = document.getElementById("result");
